@@ -10,7 +10,13 @@ app.get('/', function(req, res) {
 });
 
 app.get('/help', function(req, res) {
-  res.sendFile(path.join(__dirname, '../src/index.html'));
+//  res.sendFile(path.join(__dirname, '../src/index.html'));
+  res.redirect("http://www.google.com");
+});
+
+app.get('/new', function(req, res) {
+  //  res.sendFile(path.join(__dirname, '../src/index.html'));
+    open("http://www.google.com");
 });
 
 app.listen(port, function(err) {
